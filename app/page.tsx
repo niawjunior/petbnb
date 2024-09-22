@@ -224,7 +224,11 @@ export default function Home() {
                     />
                   </CardContent>
                   <CardActions sx={{ justifyContent: "center" }}>
-                    <Button size="medium" variant="outlined">
+                    <Button
+                      size="medium"
+                      variant="outlined"
+                      href={`/items/${house.id}`}
+                    >
                       ดูรายละเอียด
                     </Button>
                   </CardActions>
