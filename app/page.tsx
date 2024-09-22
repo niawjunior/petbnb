@@ -4,8 +4,10 @@ import {
   Card,
   CardActions,
   CardContent,
+  CardMedia,
   Container,
   Grid2,
+  Rating,
   Typography,
 } from "@mui/material"
 import Layout from "./components/Layout"
@@ -13,6 +15,53 @@ import Image from "next/image"
 import heroImg from "../public/images/pets.jpg" // update path accordingly
 import Search from "./components/Search"
 
+const houses = [
+  {
+    id: 1,
+    title: "บ้านพักสุดหรู",
+    description:
+      "บ้านที่สะดวกสบายและปลอดภัยสำหรับสัตว์เลี้ยงของคุณ ตั้งอยู่ในใจกลางเมือง.",
+    price: "1500 บาท/คืน",
+    rating: 4.5,
+    image: heroImg.src,
+  },
+  {
+    id: 2,
+    title: "บ้านพักกลางป่า",
+    description:
+      "บ้านท่ามกลางธรรมชาติที่สัตว์เลี้ยงของคุณจะได้สัมผัสกับอากาศบริสุทธิ์.",
+    price: "1200 บาท/คืน",
+    rating: 4.0,
+    image: heroImg.src,
+  },
+  {
+    id: 3,
+    title: "บ้านพักริมทะเล",
+    description:
+      "บ้านพักสุดชิลติดทะเล เหมาะสำหรับสัตว์เลี้ยงที่ชอบวิ่งเล่นริมหาด.",
+    price: "1800 บาท/คืน",
+    rating: 5.0,
+    image: heroImg.src,
+  },
+  {
+    id: 4,
+    title: "บ้านพักบนภูเขา",
+    description:
+      "บ้านพักวิวภูเขาที่สัตว์เลี้ยงของคุณจะได้ผ่อนคลายกับทิวทัศน์สวยงาม.",
+    price: "1600 บาท/คืน",
+    rating: 4.3,
+    image: heroImg.src,
+  },
+  {
+    id: 5,
+    title: "บ้านพักใจกลางเมือง",
+    description:
+      "บ้านพักในย่านใจกลางเมืองที่สะดวกต่อการเดินทางและการดูแลสัตว์เลี้ยง.",
+    price: "2000 บาท/คืน",
+    rating: 4.7,
+    image: heroImg.src,
+  },
+]
 export default function Home() {
   return (
     <Layout>
@@ -132,6 +181,58 @@ export default function Home() {
             </Card>
           </Grid2>
         </Grid2>
+      </Container>
+
+      <Container>
+        <Box sx={{ mt: 6, mb: 6 }}>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "bold", mb: 4, textAlign: "center" }}
+          >
+            บ้านพร้อมสำหรับเข้าพัก
+          </Typography>
+
+          <Grid2 container spacing={4}>
+            {houses.map((house) => (
+              <Grid2 size={{ xs: 12, md: 4 }} key={house.id}>
+                <Card sx={{ textAlign: "center", p: 3 }}>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={house.image} // Use the image from the data
+                    alt={house.title}
+                  />
+                  <CardContent>
+                    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+                      {house.title}
+                    </Typography>
+                    <Typography variant="body1" color="text.secondary">
+                      {house.description}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ mt: 2 }}
+                    >
+                      ราคา: {house.price}
+                    </Typography>
+                    <Rating
+                      name="read-only"
+                      value={house.rating}
+                      readOnly
+                      sx={{ mt: 1 }}
+                    />
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: "center" }}>
+                    <Button size="medium" variant="outlined">
+                      ดูรายละเอียด
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid2>
+            ))}
+          </Grid2>
+        </Box>
       </Container>
     </Layout>
   )

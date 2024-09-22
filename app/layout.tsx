@@ -12,7 +12,7 @@ const prompt = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "PetBnB",
+  title: "Pet B&B",
   description: "Where pets vacation while you're away",
 }
 

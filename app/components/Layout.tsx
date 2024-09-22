@@ -112,9 +112,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </Box>
 
-      <Box component="footer" sx={{ p: 3, mt: 4, backgroundColor: "#f8f8f8" }}>
-        <Typography variant="body1" align="center">
-          PetBnB &copy; {new Date().getFullYear()}
+      <Box
+        component="footer"
+        sx={{ p: 3, mt: 4, backgroundColor: "primary.light" }}
+      >
+        <Typography variant="body1" align="center" color="white">
+          Pet B&B &copy; {new Date().getFullYear()}
         </Typography>
       </Box>
     </>
