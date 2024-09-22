@@ -47,7 +47,7 @@ export default function Home() {
           }}
         >
           <Typography variant="h2" component="h1" sx={{ fontWeight: "bold" }}>
-            ยินดีต้อนรับเข้าสู่ PetBnB
+            ยินดีต้อนรับเข้าสู่ Pet B&B
           </Typography>
           <Typography variant="h5" component="p">
             ค้นหาห้องพักสําหรับสัตว์เลี้ยงของคุณ

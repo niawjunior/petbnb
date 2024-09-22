@@ -17,6 +17,7 @@ import {
 import PetsIcon from "@mui/icons-material/Pets"
 import MenuIcon from "@mui/icons-material/Menu"
 import { useState } from "react"
+import Link from "next/link"
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -58,7 +59,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <Toolbar>
           <PetsIcon sx={{ mr: 2 }} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            PetBnB
+            <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+              Pet B&B
+            </Link>
           </Typography>
 
           {/* Responsive Menu for Mobile */}
@@ -83,8 +86,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Button color="inherit" href="/services">
                 Services
               </Button>
-              <Button color="inherit">Contact</Button>
-              <Button color="inherit">Login</Button>
+              <Button color="inherit" href="/contact">
+                Contact
+              </Button>
+              <Button color="inherit" href="/login">
+                Login
+              </Button>
             </>
           )}
         </Toolbar>
@@ -96,7 +103,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <Box
         sx={{
-          minHeight: "calc(100vh - 168px)", // Set a minimum height for the content
+          minHeight: "calc(100vh - 210px)", // Set a minimum height for the content
         }}
       >
         {children}
