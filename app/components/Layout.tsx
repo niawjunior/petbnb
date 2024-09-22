@@ -32,16 +32,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <Box onClick={handleDrawerToggle} sx={{ width: 250 }}>
       <List>
         <ListItem>
-          <ListItemText primary="Home" />
+          <ListItemText primary="หน้าแรก" />
         </ListItem>
         <ListItem>
-          <ListItemText primary="About" />
+          <ListItemText primary="เกี่ยวกับเรา" />
         </ListItem>
         <ListItem>
-          <ListItemText primary="Services" />
+          <ListItemText primary="บริการ" />
         </ListItem>
         <ListItem>
-          <ListItemText primary="Contact" />
+          <ListItemText primary="ติดต่อเรา" />
+        </ListItem>
+        <ListItem>
+          <ListItemText primary="เข้าสู่ระบบ" />
         </ListItem>
       </List>
     </Box>
@@ -78,19 +81,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             // Desktop Links
             <>
               <Button color="inherit" href="/">
-                Home
+                หน้าแรก
               </Button>
               <Button color="inherit" href="/about">
-                About
+                เกี่ยวกับเรา
               </Button>
               <Button color="inherit" href="/services">
-                Services
+                บริการ
               </Button>
               <Button color="inherit" href="/contact">
-                Contact
+                ติดต่อเรา
               </Button>
               <Button color="inherit" href="/login">
-                Login
+                เข้าสู่ระบบ
               </Button>
             </>
           )}

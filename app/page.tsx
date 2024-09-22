@@ -57,62 +57,77 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Container>
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h2" gutterBottom>
-            Comfortable Homes for Pets
+      {/* Main Content */}
+      <Container sx={{ py: 6 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2 }}>
+            บ้านที่สะดวกสบายสำหรับสัตว์เลี้ยง
           </Typography>
-          <Typography variant="h5">
-            Find the perfect stay for your pets with trusted hosts.
+          <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
+            {`ค้นหาที่พักที่สมบูรณ์แบบสำหรับสัตว์เลี้ยงของคุณกับเจ้าของบ้านที่เชื่อถือได้ ไม่ว่าคุณจะมองหาความปลอดภัย ความสะดวกสบาย หรือเจ้าของบ้านท้องถิ่นใกล้เคียง เรามีครบทุกอย่าง`}
           </Typography>
-          <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-            Get Started
+          <Button variant="contained" color="primary" size="large">
+            เริ่มต้นเลย
           </Button>
         </Box>
 
-        <Grid2 container spacing={4}>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Card>
+        <Grid2 container spacing={4} sx={{ display: "flex" }}>
+          {/* การ์ดความปลอดภัยเป็นอันดับแรก */}
+          <Grid2 size={{ xs: 12, md: 4 }} sx={{ display: "flex" }}>
+            <Card sx={{ textAlign: "center", p: 3, flexGrow: 1 }}>
               <CardContent>
-                <Typography variant="h5" component="div">
-                  Safety First
+                <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                  ความปลอดภัยเป็นอันดับแรก
                 </Typography>
-                <Typography color="text.secondary">
-                  All hosts are verified and trustworthy.
+                <Typography variant="body1" color="text.secondary">
+                  เจ้าของบ้านทุกคนได้รับการยืนยันตัวตน และเชื่อถือได้
+                  เพื่อให้แน่ใจว่าสภาพแวดล้อมปลอดภัยสำหรับสัตว์เลี้ยงของคุณ
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small">Learn More</Button>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <Button size="medium" variant="outlined">
+                  เรียนรู้เพิ่มเติม
+                </Button>
               </CardActions>
             </Card>
           </Grid2>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Card>
+
+          {/* การ์ดความสะดวกสบาย */}
+          <Grid2 size={{ xs: 12, md: 4 }} sx={{ display: "flex" }}>
+            <Card sx={{ textAlign: "center", p: 3, flexGrow: 1 }}>
               <CardContent>
-                <Typography variant="h5" component="div">
-                  Comfort
+                <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                  ความสะดวกสบาย
                 </Typography>
-                <Typography color="text.secondary">
-                  Your pets will feel right at home.
+                <Typography variant="body1" color="text.secondary">
+                  สัตว์เลี้ยงของคุณจะรู้สึกเหมือนอยู่บ้าน
+                  ด้วยที่พักที่สะดวกสบายของเรา
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small">Learn More</Button>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <Button size="medium" variant="outlined">
+                  เรียนรู้เพิ่มเติม
+                </Button>
               </CardActions>
             </Card>
           </Grid2>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Card>
+
+          {/* การ์ดเจ้าของบ้านท้องถิ่น */}
+          <Grid2 size={{ xs: 12, md: 4 }} sx={{ display: "flex" }}>
+            <Card sx={{ textAlign: "center", p: 3, flexGrow: 1 }}>
               <CardContent>
-                <Typography variant="h5" component="div">
-                  Local Hosts
+                <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                  เจ้าของบ้านท้องถิ่น
                 </Typography>
-                <Typography color="text.secondary">
-                  Find hosts in your local area.
+                <Typography variant="body1" color="text.secondary">
+                  พบเจ้าของบ้านที่เชื่อถือได้ในพื้นที่ของคุณ
+                  เพื่อความสะดวกในการเข้าพัก
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small">Learn More</Button>
+              <CardActions sx={{ justifyContent: "center" }}>
+                <Button size="medium" variant="outlined">
+                  เรียนรู้เพิ่มเติม
+                </Button>
               </CardActions>
             </Card>
           </Grid2>
